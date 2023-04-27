@@ -55,7 +55,7 @@ public class Magpie4
         {
             response = transformIWantToStatement(statement);
         }
-
+        
         else
         {
             // Look for a two word (you <something> me)
@@ -71,6 +71,7 @@ public class Magpie4
             {
                 response = getRandomResponse();
             }
+        
         }
         return response;
     }
@@ -93,7 +94,7 @@ public class Magpie4
                     .length() - 1);
         }
         int psn = findKeyword (statement, "I want to", 0);
-        String restOfStatement = statement.substring(statement.lastIndexOf(" to ") + lastChar.length());
+        String restOfStatement = statement.substring(statement.lastIndexOf(" to ") + lastChar.length()).trim();
         return "Would you really be happy if you had " + restOfStatement + "?";
     }
 
