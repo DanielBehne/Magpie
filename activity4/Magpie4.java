@@ -121,10 +121,10 @@ public class Magpie4
         int psnOfYou = findKeyword (statement, "you", 0);
         int psnOfMe = findKeyword (statement, "me", psnOfYou + 3);
         
-        String removeYou = statement.replace(" you ","hello ");
+        String changeAre = statement.replace(" are "," am ");
         
         String restOfStatement = statement.substring(statement.lastIndexOf (" you ") + psnOfYou+3, psnOfMe).trim();
-        return "What makes you think that I " + restOfStatement + " you?";
+        return "What makes you think that I " + changeAre + restOfStatement + " you?";
     }
     
     
