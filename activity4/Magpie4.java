@@ -62,8 +62,7 @@ public class Magpie4
             // pattern
             int psn = findKeyword(statement, "you", 0);
 
-            if (psn >= 0
-                    && findKeyword(statement, "me", psn) >= 0)
+            if (psn >= 0 && findKeyword(statement, "me", psn) >= 0)
             {
                 response = transformYouMeStatement(statement);
             }
@@ -123,8 +122,8 @@ public class Magpie4
         
         String changeAre = statement.replace(" are "," am ");
         
-        String restOfStatement = statement.substring(statement.lastIndexOf (" you ") + psnOfYou+3, psnOfMe).trim();
-        return "What makes you think that I " + changeAre + restOfStatement + " you?";
+        String restOfStatement = changeAre.substring(psnOfYou+3, psnOfMe-1).trim();
+        return "What makes you think that I "  + restOfStatement + " you?";
     }
     
     
