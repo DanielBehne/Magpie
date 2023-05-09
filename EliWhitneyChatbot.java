@@ -1,5 +1,4 @@
  
-
 import java.util.Random;
 
 /**
@@ -39,7 +38,12 @@ public class EliWhitneyChatbot
         {
             response = "Say something, please.";
         }
-
+        else if (findKeyword(statement, "name") >= 0) {
+            response = "My name is Eli Whitney.";
+        }
+        else if (findKeyword(statement, "famous") >= 0) {
+            response = "I'm famous because I invented the cotton gin!";
+        }
         else if (findKeyword(statement, "no") >= 0)
         {
             response = "Why so negative?";
