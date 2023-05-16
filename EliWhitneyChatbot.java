@@ -49,9 +49,15 @@ public class EliWhitneyChatbot
         }
         else if (findKeyword(statement, "children") >= 0
         || findKeyword(statement, "kids") >= 0) {
-            response = "Yes, I have 4 children.";
+            response = "Yes, I had 4 children.";
         } else if (findKeyword(statement, "names") >= 0) {
             response = "Their names are Elizabeth, Frances, Susan, and Eli.";
+        }
+        else if (findKeyword(statement, "born") >= 0) {
+            response = "I was born in Westborough Massachusetts.";
+        }
+        else if (findKeyword(statement, "live") >= 0) {
+            response = "I lived in New Haven, Connecticut.";
         }
         else if (findKeyword(statement, "no") >= 0)
         {
